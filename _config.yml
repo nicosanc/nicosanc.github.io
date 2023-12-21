@@ -18,16 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Nico's Reservoir of Knowledge
+email: nicosanchez0411@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This blog site was inspired by Lil'Log, Lilian Weng's (software lead at OpenAI) blog site. Given the complicated tech job
+  market, I decided this was the best way to showcase what I've spent the last few months learning. This site serves as a hub for 
+  my learning notes on topics like Machine Learning, Mathematics, and Statistics.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+linked_username: https://www.linkedin.com/in/nicolas-sanchez-noguera-0792621a5/
+github_username:  nicosanc
 
 # Build settings
 theme: minima
