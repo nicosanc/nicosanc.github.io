@@ -26,10 +26,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   my learning notes on topics like Machine Learning, Mathematics, and Statistics.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-social_links:
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/nicolas-sanchez-noguera-0792621a5/
-    icon: linkedin
+minima:
+  social_links:
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/nicolas-sanchez-noguera-0792621a5/
+      icon: linkedin
+      
 github_username:  nicosanc
 
 # Build settings
