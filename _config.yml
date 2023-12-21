@@ -25,20 +25,14 @@ description: >- # this means to ignore newlines until "baseurl:"
   market, I decided this was the best way to showcase what I've spent the last few months learning. This site serves as a hub for 
   my learning notes on topics like Machine Learning, Mathematics, and Statistics.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
-      
+url: "" # the base hostname & protocol for your site, e.g. http://example.com  
 github_username:  nicosanc
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-minima:
-  social_links:
-    - title: LinkedIn
-      url: https://www.linkedin.com/in/nicolas-sanchez-noguera-0792621a5/
-      icon: linkedin
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
