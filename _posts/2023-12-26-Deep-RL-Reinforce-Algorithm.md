@@ -43,7 +43,7 @@ A terminal state can be the goal of the game (like reaching a specific spot in a
 It is good practice to end an episode when a maximum number of steps is taken to avoid exploring infinitely, especially early on when the agent’s decision making is no better than random. 
 The visual below shows an example of a simple environment’s terminal states, one which is a goal state (diamond) and another which is a fail state (trap). 
 
-![gridworld-img](../assets/images/gridworld.jpg)
+![gridworld-img](../assets/images/gridworld.jpg){: .center-image}
 
 **Trajectories** - The history of experiences in a given episode. This means trajectories can be seen as a set of tuples representing these experiences and are usually leveraged by algorithms to calculate the expected cumulative return over many episodes. They map out the actions, states, and rewards of each time step from beginning to end. 
 
