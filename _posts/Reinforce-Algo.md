@@ -1,5 +1,7 @@
 ---
 title: "Deep RL: Reinforce Algorithm"
+date: 2023-12-26
+categories: [Machine Learning, Reinforcement Learning]
 ---
 
 
