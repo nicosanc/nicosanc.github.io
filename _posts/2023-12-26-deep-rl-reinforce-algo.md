@@ -55,7 +55,7 @@ The visual below shows an example of a simple environment’s terminal states, o
 
 **Trajectories** - The history of experiences in a given episode. This means trajectories can be seen as a set of tuples representing these experiences and are usually leveraged by algorithms to calculate the expected cumulative return over many episodes. They map out the actions, states, and rewards of each time step from beginning to end. 
 
-**Returns** - The Return can be thought of as the cumulative reward achieved during an episode. The goal of Reinforcement learning at its core, for most RL problems, is to maximize the return. A basic formulation of the Return is: $G(t) = \sum_{t}^{T}{\gamma^{t}*r_{t+1}}$, where gamma is a discount factor that ranges between 0 and 1. When gamma is closer to 0, it means the agent will prioritize more immediate rewards over potential future rewards. 
+**Returns** - The Return can be thought of as the cumulative reward achieved during an episode. The goal of Reinforcement learning at its core, for most RL problems, is to maximize the return. A basic formulation of the Return is: $G(t) = \sum_{t}^{T} {\gamma^{t}*r_{t+1}}$, where gamma is a discount factor that ranges between 0 and 1. When gamma is closer to 0, it means the agent will prioritize more immediate rewards over potential future rewards. 
 When gamma is closer to 1, we put high priority on long term rewards. This dictates whether an agent takes an action that seems immediately valuable while ignoring the possibility of something better later on, or an action that may not be immediately useful but leads to high rewards in the long term. Finding the sweet spot for gamma is important for defining the right return function for an RL problem.
 
 **Objective** - The Objective Function is the function we want to maximize. It can be understood in many instances as the expected value of the Return function over many, many episodes. A basic formulation of the Objective Function is $J(\pi_{\theta}) = $The idea is that with enough practice, the agent’s average return will be high enough to cross a certain threshold we deem reasonable. Maximizing the objective function is 
@@ -87,7 +87,7 @@ fine tune the parameters after each pass. The network will take in a state as in
 
 $\theta = \theta + \alpha*\nabla_{\theta} J(\pi_{\theta})$
 
-Where $\nabla_{\theta} J(\pi_{\theta}) = 0$ 
+Where $\nabla_{\theta} J(\pi_{\theta}) = \sum_{t=0}^{T} {R_{t}(\tau)\nabla_{\theta}log\pi_{\theta}(a_{t}|s_{t}}}$ 
 
 This may seem a bit convoluted but the idea is that the gradient of our objective function is equal to the average of many trajectories’ returns multiplied by the gradient of the log probabilities of sampling an action ‘a’ from a state ‘s’. The reason we work with gradients of probabilities is because our model wants to boost the likelihood of choosing actions that lead to high returns while lowering the likelihood of sub-optimal actions. We can assume that the gradients of the log likelihood are weighted by the return, so Gradient Ascent will tell the network how to update the parameters depending on 
 how high or low the return was for a sampled action. The logarithm of the probability is used to stabilize the computed values since the gradients can sometimes be very small numbers. Logarithms also make computation simpler by turning products into summations. 
