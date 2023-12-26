@@ -13,6 +13,7 @@ Most RL problems can be boiled down to a baseline idea: Develop an optimal decis
 
 ## Terminology
 There’s some terminology that is imperative to understand the algorithms that I’ll be writing about in this series. 
+
 **Agent** - The agent is the internal system we are training. We let the agent interact with the world around it, 
 gaining feedback from its actions to slowly get better at making decisions. Think of it as a player in a game who starts playing a game with a blank map, 
 and over time it learns to sketch out where it's been and how its actions led it to those new places. 
@@ -33,7 +34,7 @@ make a decision about what the best next state would be and how to get there. It
 **Rewards** - Rewards are feedback points given to the agent by the environment every time it acts. The rewards serve as a rating system, dictating how good an action was given the state it was in. 
 In the image below, we can see the feedback loop where an agent takes an action in the environment and is presented with a new state and a reward for reaching that state. 
 
-![RL-feedback-loop](../assets/images/rl-feedback.png)
+![RL-feedback-loop](/assets/images/rl-feedback.png)
 
 **Experiences** - An experience is the information gathered by an agent after a singular interaction. Each experience can be represented by the tuple (state_t, action_t, reward_t+1, state_t+1) 
 which holds the current state, the potential current action, the reward gained from choosing that action, and the state it leads to. 
@@ -43,7 +44,7 @@ A terminal state can be the goal of the game (like reaching a specific spot in a
 It is good practice to end an episode when a maximum number of steps is taken to avoid exploring infinitely, especially early on when the agent’s decision making is no better than random. 
 The visual below shows an example of a simple environment’s terminal states, one which is a goal state (diamond) and another which is a fail state (trap). 
 
-![gridworld-img](../assets/images/gridworld.jpg){: .center-image}
+![gridworld-img](/assets/images/gridworld.jpg){: .center-image}
 
 **Trajectories** - The history of experiences in a given episode. This means trajectories can be seen as a set of tuples representing these experiences and are usually leveraged by algorithms to calculate the expected cumulative return over many episodes. They map out the actions, states, and rewards of each time step from beginning to end. 
 
