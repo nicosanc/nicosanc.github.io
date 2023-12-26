@@ -1,3 +1,8 @@
+---
+title: "Deep RL: Reinforce Algorithm"
+---
+
+
 ## Introduction
 My first real introduction into groundbreaking AI was in 2015 when I learned about AlphaGo, and the significance of its victory over the best Go player at the time. 
 I was blown away by the fact that a computer somehow managed to develop winning behaviors in a game with an unfathomably large state space, or number of possible arrangements that the pieces can take on the board. 
