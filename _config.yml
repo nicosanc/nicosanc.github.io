@@ -19,7 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Nico's Reservoir of Knowledge
-email: nicosanchez0411@gmail.com
+author:
+  - email: nicosanchez0411@gmail.com
+  - name: Nicolas Sanchez 
 description: >- # this means to ignore newlines until "baseurl:"
   This blog site was inspired by Lil'Log, Lilian Weng's (software lead at OpenAI) blog site. Given the complicated tech job
   market, I decided this was the best way to showcase what I've spent the last few months learning. This site serves as a hub for 
