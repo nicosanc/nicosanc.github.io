@@ -87,7 +87,10 @@ fine tune the parameters after each pass. The network will take in a state as in
 
 $$\theta = \theta + \alpha*\nabla_{\theta} J(\pi_{\theta})$$
 
-Where $$\nabla_{\theta} J(\pi_{\theta}) = \sum_{t=0}^{T} {R_{t}(\tau)\nabla_{\theta}log\pi_{\theta}(a_{t}|s_{t})}$$
+Where 
+$$
+\nabla_{\theta} J(\pi_{\theta}) = \sum_{t=0}^{T} {R_{t}(\tau)\nabla_{\theta}log\pi_{\theta}(a_{t}|s_{t})}
+$$
 
 This may seem a bit convoluted but the idea is that the gradient of our objective function is equal to the average of many trajectories’ returns multiplied by the gradient of the log probabilities of sampling an action ‘a’ from a state ‘s’. The reason we work with gradients of probabilities is because our model wants to boost the likelihood of choosing actions that lead to high returns while lowering the likelihood of sub-optimal actions. We can assume that the gradients of the log likelihood are weighted by the return, so Gradient Ascent will tell the network how to update the parameters depending on 
 how high or low the return was for a sampled action. The logarithm of the probability is used to stabilize the computed values since the gradients can sometimes be very small numbers. Logarithms also make computation simpler by turning products into summations. 
