@@ -88,6 +88,7 @@ fine tune the parameters after each pass. The network will take in a state as in
 $$\theta = \theta + \alpha*\nabla_{\theta} J(\pi_{\theta})$$
 
 Where 
+
 $$
 \nabla_{\theta} J(\pi_{\theta}) = \sum_{t=0}^{T} {R_{t}(\tau)\nabla_{\theta}log\pi_{\theta}(a_{t}|s_{t})}
 $$
