@@ -23,8 +23,7 @@ author:
   - email: nicosanchez0411@gmail.com
   - name: Nicolas Sanchez 
 description: >- # this means to ignore newlines until "baseurl:"
-  This blog site was inspired by Lil'Log, Lilian Weng's (software lead at OpenAI) blog site. Given the complicated tech job
-  market, I decided this was the best way to showcase what I've spent the last few months learning. This site serves as a hub for 
+  Given the complicated tech job market, I decided this was the best way to showcase what I've spent the last few months learning. This site will serve as a hub for 
   my learning notes on topics like Machine Learning, Mathematics, and Statistics.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com  
