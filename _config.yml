@@ -24,7 +24,7 @@ author:
   - name: Nicolas Sanchez 
 description: >- # this means to ignore newlines until "baseurl:"
   Given the complicated tech job market, I decided this was the best way to showcase what I've spent the last few months learning. This site will serve as a hub for 
-  my learning notes on topics like Machine Learning, Mathematics, and Statistics.
+  my learning notes on topics like Machine Learning, Mathematics, and Statistics. I plan to build up this site throughout my professional career to keep track of my learning journey.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com  
 
