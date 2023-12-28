@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+![profilepic](profilepic.jpg)
+
 ## Purpose
 I am a recent graduate from the University of Michigan where I majored in Data Science and minored in Mathematics. In the months since finishing my undergraduate career, I have collected ample notes from topics in Machine Learning, Math, and Stats. I have begun to organize and rewrite my notes into blog posts to share my interesting findgings in a series of posts I am dubbing "What I've Learned". It is a mix of personal research, online tutorials, and online courses. 
 
