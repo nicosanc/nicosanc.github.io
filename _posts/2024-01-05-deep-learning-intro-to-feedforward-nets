@@ -1,0 +1,11 @@
+---
+title: "Deep Learning: "Introduction to Feed-Forward Neural Networks"
+date: 2024-01-05
+categories: [Machine Learning, Deep Learning]
+---
+## Introduction
+Feed Forward Neural Networks, also known as Multi-Layer Perceptrons (MLPs), are a class of Artificial Neural Networks comprised of sequential layers of neural units. MLPs are structured as acyclic, directed, and fully connected graphs that start at the input layer and 
+end at the output layer. Between the input and output layers exist one or more hidden layers that perform computations on the data they receive at each node. Neural Networks are especially powerful function approximators because of their ability to capture complex patterns
+in data. Each node performs non-linear transformations on the data it receives which allow each layer to identify different aspects of the data. If each node perfomed linear transformations on the input signals, then each layer would essentially capture the same information, 
+making the network no better than a single layer perceptron. Thus, MLPs can learn in a hierarchical fashion where each sequential layer can learn higher level (more abstract) features from previous layers' learned patterns. Depth in the case of Deep Learning comes from the number 
+of hidden layers that exist in the model, and the width is the number of nodes of a given layer. Deep neural networks 
