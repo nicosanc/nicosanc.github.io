@@ -1,5 +1,5 @@
 ---
-title: "Deep Learning: "Introduction to Feed-Forward Neural Networks"
+title: "Deep Learning: Introduction to Feed-Forward Neural Networks"
 date: 2024-01-05
 categories: [Machine Learning, Deep Learning]
 ---
