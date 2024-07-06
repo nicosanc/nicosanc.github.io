@@ -7,7 +7,8 @@ Useful for:
 - leaderless database: cassandra, dynamoDB
 - blockchain / crypto
 
-![[Pasted image 20240624123947.png]]
+![image](https://github.com/nicosanc/nicosanc.github.io/assets/112728501/ef8af780-34f8-4179-a83c-81b7c9151cd5)
+
 Here we can see that if the 3rd node is updated, its hash updates, as well as every parent node linked to that leaf. This allows for fast comparison between trees to find where differences are in the data / files
 
 The end result of this is a [tree structure](https://www.baeldung.com/cs/binary-tree-intro) in which every intermediate node is a hash of its child nodes until the leaf nodes of the tree are actually hashes of the original data. This means every leaf node is a hash of only a small portion of the data.
@@ -73,7 +74,8 @@ Deduplication means avoiding duplicating an entire dataset anytime it is accesse
 DAGs efficiently store data by encoding redundant sections as links
 If we wanted to delete one portion of a large DAG, and replace it with another, then all of the other subDAGs can be preserved and just linked to by both the new DAG and the old DAG
 
-![[Pasted image 20240624143159.png]]
+![image](https://github.com/nicosanc/nicosanc.github.io/assets/112728501/2d8d85f7-46c1-4d53-8424-b78f6bd001f6)
+
 Since the cats subDAG is shared by both baf 8 and baf11, it can be just be linked by them without having to duplicate it
 This redundancy allows DAGs to be much more efficient
 For example, if we think of a web browser:
