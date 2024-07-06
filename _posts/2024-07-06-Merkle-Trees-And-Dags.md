@@ -2,6 +2,7 @@
 ### MERKLE TREE
 
 Helps to compute the difference between two sets of records
+
 Useful for:
 - Git version control
 - leaderless database: cassandra, dynamoDB
