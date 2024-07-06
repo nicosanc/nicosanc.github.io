@@ -68,7 +68,7 @@ When gamma is closer to 1, we put high priority on long term rewards. This dicta
 
 **Objective** - The Objective Function is the function we want to maximize. It can be understood in many instances as the expected value of the Return function over many, many episodes. A basic formulation of the Objective Function is:
 
-$$J(\pi_\theta) = \mathrm{E}_{\tau \sim \pi_\theta} \left[ \sum_{t=0}^{T} R_t \right]$$
+$$J(\pi_\theta) = \mathrm{E}_{\tau \sim \pi_\theta} \left[ \sum_{t=0}^{T} G(t)]$$
 
 The idea is that with enough practice, the agent’s average return will be high enough to cross a certain threshold we deem reasonable. Maximizing the objective function is 
 the intrinsic purpose of the agent and to achieve this, it must develop an optimal behavior.
