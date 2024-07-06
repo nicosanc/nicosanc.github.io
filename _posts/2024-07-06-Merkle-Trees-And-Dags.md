@@ -84,13 +84,3 @@ For example, if we think of a web browser:
 
 Content Addressing allows us to form distributed, decentralized global file systems. You could access an entire dataset without ever having to actually download the entire dataset as long as the dataset persists (people with network access either using or storing the data). This means the dataset can be stored as a collection of data across many computers. Files can be partitioned, and converted into a DAG
 
-
---------------------
-1. **Merkle Trees**:
-    
-    - Mention that Merkle Trees ensure data integrity and consistency in distributed systems.
-    - Highlight their use in simplifying and securing blockchain transactions.
-2. **Merkle DAGs**:
-    
-    - Explain the role of CIDs in content addressing and how it differs from traditional location-based addressing.
-    - Include a brief mention of specific applications like IPFS and how Merkle DAGs underpin these technologies.
