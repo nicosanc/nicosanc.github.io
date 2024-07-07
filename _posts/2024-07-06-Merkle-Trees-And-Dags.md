@@ -24,7 +24,7 @@ Since it uses hash functions, which produces outputs of fixed size, we can easil
 ### MERKLE DAGS
 
 Directed Acyclic graphs are the natural representation of data hierarchy, where nodes can only point to child nodes. For example,
-a `family tree`. In our case, a `MERKLE DAG` represents a hierarchy of data. Merkle DAGs use Conent Identifiers (CIDs) as a method of content addressing. CIDs differ from location-based addressing because they use the data's content
+a `family tree`. In our case, a `MERKLE DAG` represents a hierarchy of data. Merkle DAGs use Content Identifiers (CIDs) as a method of content addressing. CIDs differ from location-based addressing because they use the data's content
 rather than its location to access it. Merkle DAGs are fundamental to applications like the Interplanetary File System (IPFS) by allowing decentralized storage on a distributed network. This ensures that stored data is secure and tamper-proof while still being easily retrievable by multiple sources.
 
 To start, you must 
