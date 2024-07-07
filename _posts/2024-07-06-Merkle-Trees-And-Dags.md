@@ -45,7 +45,7 @@ Since the crypto hash function used makes it impossible to make a "self-referent
 - This an important security guarantee against infinite loops and potential DoS
 
 ### Merkle DAGs: Verifiability
-Because cryptographic strength hash algorithms to create CID, they offer a high degree of verifiability: <font color="blue">An individual who retrieves data using a content address can always compute the CID for themselves to ensure that they got the right file / data</font> 
+Because cryptographic strength hash algorithms are used to create CID, they offer a high degree of verifiability: <font color="blue">An individual who retrieves data using a content address can always compute the CID for themselves to ensure that they got the right file / data</font> 
 This offers two major security benefits:
 1. Offers permanence: the data behind the content address will never change
 2. Protection against malicious manipulation: An adversary cannot trick you into downloading or opening malicious payload without you recognizing that it has a diff CID from your desired file
@@ -67,8 +67,8 @@ Note: If there is no singular root, it will be impossible to access / traverse e
 ### Merkle DAGs: Distributability
 Merkle DAGs inherit the distributability of CIDs. This means:
 1. Anybody who has a DAG is capable of acting as a provider for that DAG
-2. When we are retrieving data encoded as DAG, like a directory of files, we can leverage this fact to retrieve all of a node's children in parallel, potentially from a number of different providers?
-3. File servers are not limited to centralized data centers, giving the data greater reach (decentralized network??)
+2. When we are retrieving data encoded as DAG, like a directory of files, we can leverage this fact to retrieve all of a node's children in parallel, potentially from a number of different providers
+3. File servers are not limited to centralized data centers, giving the data greater reach 
 4. Because each node in a DAG has its own CID, the DAG it represents can be shared and retrieved independently of any DAG it is itself embedded in
 ### Merkle DAGs: DeDuplication
 Deduplication means avoiding duplicating an entire dataset anytime it is accessed by someone
