@@ -12,7 +12,7 @@ Useful for:
 
 Here we can see that if the 3rd node is updated, its hash updates, as well as every parent node linked to that leaf. This allows for fast comparison between trees to find where differences are in the data / files
 
-The end result of this is a [tree structure](https://www.baeldung.com/cs/binary-tree-intro) in which every intermediate node is a hash of its child nodes until the leaf nodes of the tree are actually hashes of the original data. This means every leaf node is a hash of only a small portion of the data.
+The end result of this is a [tree structure](https://www.geeksforgeeks.org/introduction-to-tree-data-structure/) in which every intermediate node is a hash of its child nodes until the leaf nodes of the tree are actually hashes of the original data. This means every leaf node is a hash of only a small portion of the data.
 
 - Efficiently verifying that a large amount of data is unchanged and finding exactly where any changes may have occurred
 - Efficiently proving that a piece of data is present in a larger data set
