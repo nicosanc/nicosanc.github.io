@@ -1,9 +1,9 @@
 
 ### MERKLE TREE
 
-Helps to compute the difference between two sets of records
+Merkle Trees ensure data integrity and consistency in distributed systems by allowing efficient and secure verification of data. They are commonly used in blockchain technology to simplify and secure transactions by ensuring that any alteration in data can be quickly detected and traced back to its origin. They're frequently used in blockchain to simplify and secure transactions by ensuring that changes in data or differences between records are easily detected and traced back to their origin.
 
-Useful for:
+Common use cases:
 - Git version control
 - leaderless database: cassandra, dynamoDB
 - blockchain / crypto
@@ -23,7 +23,8 @@ fixed size hashes, regardless of the original data size.
 ### MERKLE DAGS
 
 Directed Acyclic graphs are the natural representation of data hierarchy, where nodes can only point to child nodes. For example,
-a `family tree`. In our case, a `MERKLE DAG` represents a hierarchy of data.
+a `family tree`. In our case, a `MERKLE DAG` represents a hierarchy of data. Merkle DAGs use Conent Identifiers (CIDs) as a method of content addressing. CIDs differ from location-based addressing because they use the data's content
+rather than its location to access it. Merkle DAGs are fundamental to applications like the Interplanetary File System (IPFS) by allowing decentralized storage on a distributed network. This ensures that stored data is secure and tamper-proof while still being easily retrievable by multiple sources.
 
 To start, you must 
 - Encode the leaf nodes of the graph
@@ -38,14 +39,15 @@ Intermediary nodes look a bit different:
 	- each of which links to a child node in the graph
 	- The CIDs are actually embedded into these nodes' value
 
-If a change is made at any level, the change is propagated <font color="blue">to each one of the node's ancestors</font>. For example if a leaf node containing an image is slightly photoshopped, its pixel content changes and thus its cryptographic hash changes with it. This produces a <font color="blue">new CID value</font> which is then updated in its parent node, and all its ancestors. This means that Merkle DAGs are <font color="blue">strictly bottom-up</font>. This means parent nodes cannot be created until the CIDs of their children can be determined
+If a change is made at any level, the change is propagated to each one of the `node's ancestors`. For example if a leaf node containing an image is slightly photoshopped, its pixel content changes and thus its cryptographic hash changes with it. This produces a `new CID value` which is then updated in its parent node, and all its ancestors. This means that Merkle DAGs are `strictly bottom-up`. This means parent nodes cannot be created until the CIDs of their children can be determined
 - Note: The changes are only made to the nodes directly linked to the changed node
 	- This means nodes from other branches in the tree remain unaffected since they're not directly dependent on the changed node
 Since the crypto hash function used makes it impossible to make a "self-referential" path through the tree. 
 - This an important security guarantee against infinite loops and potential DoS
 
 ### Merkle DAGs: Verifiability
-Because cryptographic strength hash algorithms are used to create CID, they offer a high degree of verifiability: <font color="blue">An individual who retrieves data using a content address can always compute the CID for themselves to ensure that they got the right file / data</font> 
+Because cryptographic strength hash algorithms are used to create CID, they offer a high degree of verifiability: An individual who retrieves data using a content address can always compute the CID for themselves to ensure that they got the right file or data.
+
 This offers two major security benefits:
 1. Offers permanence: the data behind the content address will never change
 2. Protection against malicious manipulation: An adversary cannot trick you into downloading or opening malicious payload without you recognizing that it has a diff CID from your desired file
@@ -83,7 +85,8 @@ For example, if we think of a web browser:
 - Location addressed data (URLs) are used to retrieve a web page, and all of its contents must be downloaded everytime the page is accessed
 	- Even though many sites may seem like basic variations of each other in terms of themes or templating, they must each be redownloaded everytime
 - If content based addressing was used, then a browser could just link to the stored themes and templates without redownloading them, only downloading whatever is <font color="blue">different</font> between them
-	- This is the basic idea of <font color="blue">versioning</font> like GIT
+	- This is the basic idea of `versioning` like GIT
 
 Content Addressing allows us to form distributed, decentralized global file systems. You could access an entire dataset without ever having to actually download the entire dataset as long as the dataset persists (people with network access either using or storing the data). This means the dataset can be stored as a collection of data across many computers. Files can be partitioned, and converted into a DAG
+
 
