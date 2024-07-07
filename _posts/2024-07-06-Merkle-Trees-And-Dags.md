@@ -109,7 +109,7 @@ values of their nodes. They're seen frequently in blockchain and form the basis 
 
 [Merkle DAGS - ProtoSchool](https://proto.school/merkle-dags)
 
-[Cryptographic hash functions](https://www.geeksforgeeks.org/hash-functions-and-list-types-of-hash-functions/)
+[Cryptographic Hash Functions](https://www.geeksforgeeks.org/hash-functions-and-list-types-of-hash-functions/)
 
 [Data Structures](https://www.geeksforgeeks.org/data-structures/)
 
