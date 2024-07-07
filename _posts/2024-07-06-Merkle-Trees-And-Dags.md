@@ -106,9 +106,13 @@ values of their nodes. They're seen frequently in blockchain and form the basis 
 
 ### Resources
 [Merkle DAGs - IPFS](https://docs.ipfs.tech/concepts/merkle-dag/)
+
 [Merkle DAGS - ProtoSchool](https://proto.school/merkle-dags)
+
 [Cryptographic hash functions](https://www.geeksforgeeks.org/hash-functions-and-list-types-of-hash-functions/)
+
 [Data Structures](https://www.geeksforgeeks.org/data-structures/)
+
 [Network Architectures](https://www.liveaction.com/resources/blog-post/centralized-vs-decentralized-vs-distributed-networks-the-history-future/)
 
 
