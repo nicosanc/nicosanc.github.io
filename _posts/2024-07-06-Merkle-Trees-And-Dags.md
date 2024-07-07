@@ -18,8 +18,9 @@ The end result of this is a [tree structure](https://www.geeksforgeeks.org/intr
 - Efficiently proving that a piece of data is present in a larger data set
 
 The leaves are partitions of an original piece of data, and can be split however we want as long as it is reproducible.
-Since it uses hash functions, which produces outputs of fixed size, we can easily determine the size of a merkle tree (and it will always be the same). The actual size of the data does not matter since it will be reduced to
-fixed size hashes, regardless of the original data size.
+Since it uses hash functions, which produces outputs of fixed size, we can easily determine the size of a merkle tree regardless of the original data's size
+
+
 ### MERKLE DAGS
 
 Directed Acyclic graphs are the natural representation of data hierarchy, where nodes can only point to child nodes. For example,
@@ -39,11 +40,13 @@ Intermediary nodes look a bit different:
 	- each of which links to a child node in the graph
 	- The CIDs are actually embedded into these nodes' value
 
+
 If a change is made at any level, the change is propagated to each one of the `node's ancestors`. For example if a leaf node containing an image is slightly photoshopped, its pixel content changes and thus its cryptographic hash changes with it. This produces a `new CID value` which is then updated in its parent node, and all its ancestors. This means that Merkle DAGs are `strictly bottom-up`. This means parent nodes cannot be created until the CIDs of their children can be determined
 - Note: The changes are only made to the nodes directly linked to the changed node
 	- This means nodes from other branches in the tree remain unaffected since they're not directly dependent on the changed node
 Since the crypto hash function used makes it impossible to make a "self-referential" path through the tree. 
 - This an important security guarantee against infinite loops and potential DoS
+
 
 ### Merkle DAGs: Verifiability
 Because cryptographic strength hash algorithms are used to create CID, they offer a high degree of verifiability: An individual who retrieves data using a content address can always compute the CID for themselves to ensure that they got the right file or data.
@@ -54,17 +57,21 @@ This offers two major security benefits:
 
 The CID of each node depends on the CID of each of its children. As such the CID of a root node uniquely identifies not just that node, but the entire DAG of which it's the root. 
 
+
 ##### Any Node Can Be a Root Node
 DAGs can be seen as recursive data structures, meaning every DAG can be broken down into smaller DAGs within itself
 Benefits:
 - Allows you to retrieve a subgraph of the file system or DB without having to retrieve any other files not directly linked to it
 	- ensures protection and privacy of all the other data that is stored in the global DAG
 - Allows you to insert a subgraph into another DAG since the CID of the root only depends on its descendants not its ancestors
+
+  
 ##### Ensuring A Root Node Exists
 It is not strictly necessary to have a singular root, since the data can be structured as multiple DAGs with separate roots
 - If you want a single root, one can be created by linking all of the roots to one new root that connects all of the data
 - If we don't, we can have separate data structures that simply share data 
 Note: If there is no singular root, it will be impossible to access / traverse every node of the data.
+
 
 ### Merkle DAGs: Distributability
 Merkle DAGs inherit the distributability of CIDs. This means:
@@ -72,6 +79,8 @@ Merkle DAGs inherit the distributability of CIDs. This means:
 2. When we are retrieving data encoded as DAG, like a directory of files, we can leverage this fact to retrieve all of a node's children in parallel, potentially from a number of different providers
 3. File servers are not limited to centralized data centers, giving the data greater reach 
 4. Because each node in a DAG has its own CID, the DAG it represents can be shared and retrieved independently of any DAG it is itself embedded in
+
+
 ### Merkle DAGs: DeDuplication
 Deduplication means avoiding duplicating an entire dataset anytime it is accessed by someone
 DAGs efficiently store data by encoding redundant sections as links
@@ -87,6 +96,19 @@ For example, if we think of a web browser:
 - If content based addressing was used, then a browser could just link to the stored themes and templates without redownloading them, only downloading whatever is <font color="blue">different</font> between them
 	- This is the basic idea of `versioning` like GIT
 
-Content Addressing allows us to form distributed, decentralized global file systems. You could access an entire dataset without ever having to actually download the entire dataset as long as the dataset persists (people with network access either using or storing the data). This means the dataset can be stored as a collection of data across many computers. Files can be partitioned, and converted into a DAG
+Content Addressing allows us to form distributed, decentralized global file systems. You could access an entire dataset without ever having to actually download the entire dataset as long as the dataset persists (people with network access either using or storing the data). This means the dataset can be stored as a collection of data across many computers. Files can be partitioned, and converted into a DAG.
+
+
+### Summary
+Merkle Trees and Merkle DAGs play a paramount role in ensuring secure and verifiable decentralization of data in distributed networks. They allow for easy detection of changes in data, reflected by differences in the hash
+values of their nodes. They're seen frequently in blockchain and form the basis for IPFS, one of the most used distributed file system's. They also lay the foundation for versioning technology like GIT.
+
+
+### Resources
+[Merkle DAGs - IPFS](https://docs.ipfs.tech/concepts/merkle-dag/)
+[Merkle DAGS - ProtoSchool](https://proto.school/merkle-dags)
+[Cryptographic hash functions](https://www.geeksforgeeks.org/hash-functions-and-list-types-of-hash-functions/)
+[Data Structures](https://www.geeksforgeeks.org/data-structures/)
+[Network Architectures](https://www.liveaction.com/resources/blog-post/centralized-vs-decentralized-vs-distributed-networks-the-history-future/)
 
 
