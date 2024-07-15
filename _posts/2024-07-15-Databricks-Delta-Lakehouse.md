@@ -1,3 +1,8 @@
+---
+title: "Databricks Associate DE Notes: Delta Lake House"
+---
+
+
 ##### (1) Databricks Delta Lake house
 A `data lake` is simply a centralized storage repository that can hold structured and unstructured data in its raw form, from various sources. Can hold data at any scale (massive amounts)
 `Delta Lake`: An open source storage framework that brings reliability to data lakes. 
