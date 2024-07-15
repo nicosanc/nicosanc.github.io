@@ -1,3 +1,8 @@
+---
+title: "Databricks Associate DE Notes: Data Governance"
+---
+
+
 This and the subsequent 'Databricks' posts are the general notes I used to prepare for the Databricks Associate Data Engineer Certification. I am providing these on the site to show my note taking process, and display my technical communication ability.
 
 
