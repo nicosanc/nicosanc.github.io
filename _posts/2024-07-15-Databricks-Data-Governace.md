@@ -1,3 +1,6 @@
+This and the subsequent 'Databricks' posts are the general notes I used to prepare for the Databricks Associate Data Engineer Certification. I am providing these on the site to show my note taking prcoess, and display my technical communication ability.
+
+
 ### Programmatically grant, deny, and revoke access to data objects
 
 ```SQL
