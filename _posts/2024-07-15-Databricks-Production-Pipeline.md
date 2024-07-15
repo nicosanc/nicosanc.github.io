@@ -1,3 +1,7 @@
+---
+title: "Databricks Associate DE Notes: Production Pipeline"
+---
+
 ### Delta Live Tables
 A framework for building reliable and maintainable data processing pipelines
 - They function using multi hop
