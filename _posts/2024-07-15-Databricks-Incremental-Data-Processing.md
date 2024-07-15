@@ -1,3 +1,7 @@
+---
+title: "Databricks Associate DE Notes: "Incremental Data Processing"
+---
+
 ### Data Streams
 Any source of data that grows over time
 - New files landing in a cloud 'db'
