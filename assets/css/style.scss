@@ -8,10 +8,18 @@ body {
   font-style: normal;
 }
 
+code {
+    background-color: #f5f5f5; /* Light grey for code snippets */
+    color: #333333; /* Dark grey for text */
+    padding: 2px 4px;
+    border-radius: 0;
+}
+
 pre code {
-    background-color: #f0f0f0; /* Change this to your desired background color */
-    color: #333; /* Change this to your desired text color */
-    font-size: 90%;
+    background-color: #f5f5f5; /* Light grey for block code */
+    color: #333333; /* Dark grey for text */
+    padding: 10px;
+    border-radius: 0;
     display: block;
     overflow-x: auto;
 }
