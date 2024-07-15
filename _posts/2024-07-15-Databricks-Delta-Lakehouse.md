@@ -10,12 +10,12 @@ A `data lake` is simply a centralized storage repository that can hold structure
 
 ##### (2) Advanced Delta Lake Features
 `Time Travel`: Allows for working with different versions of files 
-- Audit data changes using <font color='cyan'>DESCRIBE HISTORY</font>
+- Audit data changes using `DESCRIBE HISTORY`
 - Query older versions of a file by using the older version's timestamp or version number (everything is versioned).
-- Rollback old versions of a file using <font color='cyan'>RESTORE TABLE</font> 
-- Compress small files using <font color='cyan'>OPTIMIZE</font>
+- Rollback old versions of a file using `RESTORE TABLE`
+- Compress small files using `OPTIMIZE`
 - Clean up unused files like uncommitted files or files that are not in the latest dataset
-	- The <font color='cyan'>VACUUM</font> cmd allows you to retain files for a certain period, then deletes them once their lifetime expires
+	- The `VACUUM` cmd allows you to retain files for a certain period, then deletes them once their lifetime expires
 
 ##### (3) Relational Entities
 Databases in Databricks are schemas in `Hive Metastore`
@@ -23,37 +23,37 @@ Databases in Databricks are schemas in `Hive Metastore`
 - When tables are created in the default database or in a custom database, they're saved as folders in the *'hive/warehouse'* directory of the Hive metastore
 - Databases can be saved to custom paths, but retain their definition in the hive metastore of *YOUR WORKSPACE*
 
-`Managed Tables`: 
+Managed Tables: 
 - Created under the database directory 
 - Dropping Tables deletes their underlying data files
-`External Tables`
-- Created under a custom path using <font color='cyan'>CREATE TABLE table_name LOCATION '/path/'</font> 
+External Tables
+- Created under a custom path using `CREATE TABLE table_name LOCATION '/path/'`
 - Dropping Tables will *NOT* delete underlying datafiles
 
 Delta Tables can be created using `CTAS` cmds
 - CTAS: Populate newly created tables with the results of a SELECT statement
-	- <font color='cyan'>CREATE TABLE _ AS SELECT * FROM _</font> 
+	- `CREATE TABLE _ AS SELECT * FROM _` 
 	- Automatically infer schema information from the query results 
 	- Does *NOT* support manual schema declarations
-	- You can filter and rename columns within a CTAS cmd such as <font color='cyan'>CREATE TABLE _ AS SELECT col1, col3 as new_col_3 FROM table</font> where col3 gets renamed
+	- You can filter and rename columns within a CTAS cmd such as `CREATE TABLE _ AS SELECT col1, col3 as new_col_3 FROM table` where col3 gets renamed
 	- Can also specify more information in the cmd such as
-		- <font color='cyan'>COMMENT "some comment"</font>
-		- <font color='cyan'>PARTITIONED_BY(col1, col2)</font>
-		- <font color='cyan'>LOCATION '/path/'</font>
+		- `COMMENT "some comment"`
+		- `PARTITIONED_BY(col1, col2)`
+		- `LOCATION '/path/'`
 - Regular CREATE TABLE cmds have to manually declare the fields of the table, and then must use inserts to fill the table
 - Table Constraints: Databricks supports the (1) NOT NULL  and (2) CHECK constraints
-	- <font color='cyan'>ALTER TABLE table_name ADD CONSTRAINT constraint_name constraint_details</font>  such as ALTER TABLE table_name ADD CONSTRAINT valid_date CHECK(date > '2020-11-11')
+	- `ALTER TABLE table_name ADD CONSTRAINT constraint_name constraint_details` such as `ALTER TABLE table_name ADD CONSTRAINT valid_date CHECK(date > '2020-11-11')`
 
 Delta Lakes can be cloned:
 - Deep Clone: fully copies data and metadata from a source table as a target
-	- <font color='cyan'>CREATE TABLE table_name DEEPCLONE source_table</font> 
+	- `CREATE TABLE table_name DEEPCLONE source_table` 
 -Shallow Clone: Only copies over delta transaction logs from source table
-	- <font color='cyan'>CREATE TABLE table_name SHALLOW COPY source table </font> 
+	- `CREATE TABLE table_name SHALLOW COPY source table` 
 - Changes made to either kind of clone are *NOT* reflected in source table
 
 Views in Databricks
-- Stored views: persisted objects using <font color='cyan'>CREATE VIEW view AS query</font>
-- Temp Views: Spark session-scoped views using <font color='cyan'>CREATE TEMP VIEW view AS query</font>
+- Stored views: persisted objects using `CREATE VIEW view AS query`
+- Temp Views: Spark session-scoped views using `CREATE TEMP VIEW view AS query`
 	- `Spark Sessions` are created when (1) A new notebook is opened, (2) Detaching and reattaching to a cluster, (3) Installing a pypackage, and (4) Restarting a cluster
-- Global Temp Views: Cluster-scoped views that persist as long as the cluster is active using <font color='cyan'>CREATE GLOBAL TEMP VIEW view</font> 
-	- They can only be accessed using <font color='cyan'>global_temp.view</font> since global temps are always added to a temporary database called global_temp that persists in that cluster
+- Global Temp Views: Cluster-scoped views that persist as long as the cluster is active using `CREATE GLOBAL TEMP VIEW view`
+	- They can only be accessed using `global_temp.view` since global temps are always added to a temporary database called global_temp that persists in that cluster
