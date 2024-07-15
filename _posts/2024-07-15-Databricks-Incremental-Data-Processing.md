@@ -1,5 +1,5 @@
 ---
-title: "Databricks Associate DE Notes: "Incremental Data Processing"
+title: "Databricks Associate DE Notes: Incremental Data Processing"
 ---
 
 <script type="text/javascript" async
