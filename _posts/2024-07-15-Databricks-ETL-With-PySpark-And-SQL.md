@@ -1,5 +1,5 @@
 ##### (1) Querying Files
-- SELECT * FROM <font color='cyan'>file_format.`path`
+- SELECT * FROM file_format.`path`
 	- Uses backticks to name the file path
 	- Best supports self describing file formats like JSON or parquet files
 	- Can retrieve a file, many files using the asterisk, or a directory
