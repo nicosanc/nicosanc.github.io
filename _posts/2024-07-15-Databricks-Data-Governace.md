@@ -1,4 +1,4 @@
-##### Programmatically grant, deny, and revoke access to data objects
+## Programmatically grant, deny, and revoke access to data objects
 
 ```SQL
 GRANT privilege ON object_name TO user_info
@@ -33,7 +33,7 @@ More Operations:
 - REVOKE
 - SHOW GRANTS
 
-##### Unity Catalog 
+## Unity Catalog 
 Centralized governance solution across all your workspaces on any cloud filesystem
 - Unify governance for all data and AD assets
 	- Files, tables, ML models, and dashboards
@@ -47,13 +47,13 @@ Centralized governance solution across all your workspaces on any cloud filesyst
 SELECT * FROM catalog.schema.table
 ```
 
-##### UC Hierarchy
+## UC Hierarchy
 1. UC Metastore
 2. Catalog, storage credential, External location, shares, recipients
 3. Schema
 4. Table/View/Function
 
-##### Identities
+## Identities
 - Users: identified by email
 	- Account Admin (for example)
 - Service Principles: identified by application ID
@@ -73,7 +73,7 @@ Privileges:
 - WRITE FILES
 - EXECUTE (for functions)
 
-##### Security Model
+## Security Model
 GRANT PRIV ON securable_obj TO principle
 - securable objects are anything within the 3-level hierarchy excluding the actual UC metastore 
 - You still have access to a workspace's legacy hive metastore when it is assigned to a UC metastore
