@@ -1,3 +1,7 @@
+---
+title: "Databricks Associate DE Notes: ETL With PySpark and SQL"
+---
+
 ##### (1) Querying Files
 - SELECT * FROM file_format.`path`
 	- Uses backticks to name the file path
