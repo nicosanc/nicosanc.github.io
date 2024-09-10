@@ -10,9 +10,9 @@ categories: [Machine Learning, Reinforcement Learning]
 
 
 ## Introduction
-My first real introduction into groundbreaking AI was in 2015 when I learned about AlphaGo, and the significance of its victory over the best Go player at the time. 
+My first real introduction to groundbreaking AI was in 2015 when I learned about AlphaGo, and the significance of its victory over the best Go player at the time. 
 I was blown away by the fact that a computer somehow managed to develop winning behaviors in a game with an unfathomably large state space, or number of possible arrangements that the pieces can take on the board. 
-I’ve been fascinated with the topic ever since and have decided to write a blog series explaining some popular algorithms and their significance in RL’s progression. 
+I’ve been fascinated with the topic ever since and have decided to write a blog post explaining a popular algorithm and its significance in RL’s progression. 
 These blogs are tailored mainly for people in STEM fields, since they require some basic understanding of topics like Deep Learning and Calculus. 
 I will try to be sparing with technical jargon, and offer explanations that can be understood by people of varying levels of knowledge.
 
