@@ -1,3 +1,7 @@
+---
+title: "Blockchain: Solana Basics"
+---
+
 ### Macro comparison to Ethereum
 
 | FEATURE                  | SOLANA                                         | ETHEREUM                                          |
