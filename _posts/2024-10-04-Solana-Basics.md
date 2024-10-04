@@ -13,17 +13,17 @@
 
 -----------------------------------------------------------
 
-##### Unique aspects of solana
+### Unique aspects of solana
 - PoH: cryptographic clock that orders events, allowing high throughput
 - SeaLevel: Solana's parallel smart contract runtime allowing simultaneous transactions
 - Low Fees: Consistently low TX fees due to efficient processing
 
-##### Unique aspects of ethereum
+### Unique aspects of ethereum
 - EVM Compatibility: Broad support and compatibility with existing dApps
 - Strong Ecosystem: Large dev community and extensive infrastructure
 - L2 solutions: Scaling solutions like Rollups to improve TX speed and reduce costs
 
-##### Block Generation
+### Block Generation
 Key components:
 - PoH
 	- **Cryptographic Clock**: PoH creates a historical record that proves that an event has occurred at a specific moment in time. The sequence of events is recorded before consensus
@@ -35,7 +35,7 @@ Key components:
 	- **Leader Schedule**: Solana uses a leader schedule, where a validator (leader) is chosen to create a block for a short period of time (~ 400 ms)
 	- **Parallel Processing**: TXs are processed in parallel using SeaLevel, Solana's runtime for smart contracts, allowing multiple TXs to be executed
 
-##### SeaLevel
+### SeaLevel
 - Parallel TX Execution
 	- **Non-overlapping TXs**: can process TXs in parallel if they don't modify the same state
 	- **Read and Write Locks**: Ensures that TXs that do access the same state do so without conflicts. TXs reading the same data can run in parallel, while those writing to the same data are serialized (done in sequence)
@@ -48,7 +48,7 @@ Key components:
 - Hardware Utilization
 	- **GPU and Multi-core Processing**: leverages the capabilities of modern hardware, including GPUs and multi-core processors, to execute multiple transactions at the same time. Harnesses the full computational power of validator nodes
 
-##### Account Data Structure
+### Account Data Structure
 - Wallet Accounts
 	- **Purpose**: Hold tokens
 	- **Function**: Manage user balances and sign TXs
