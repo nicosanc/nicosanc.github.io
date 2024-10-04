@@ -12,7 +12,6 @@ This is how StarkNet does it
 ![image](https://github.com/nicosanc/nicosanc.github.io/blob/main/assets/images/sn1.jpg)
 
 The prover is run in a separate module called SHARP (Shared Prover)
-- ETH Verifier
 
 ### Order of executions
 - **Sequencer** bundles all the transactions, executing them, generating new block with new state, creates an execution trace that is sent to SHARP
