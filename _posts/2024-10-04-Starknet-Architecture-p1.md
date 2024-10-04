@@ -1,3 +1,7 @@
+---
+title: "Blockchain: Starknet Architecture Pt. 1"
+---
+
 
 ### Architecture
 Cairo Smart Contracts compiles into -> **SIERRA** (Safe Intermediate Representation) compiles into -> **CASM** (Safe Cairo Assembly) generates -> **Validity Proof**
