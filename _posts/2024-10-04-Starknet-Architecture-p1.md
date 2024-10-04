@@ -1,58 +1,3 @@
-#### Traits
-```Rust
-struct Rectangle {
-height: u64,
-width: u64
-}
-
-trait ShapeGeometry { // Functionality bluebprint
-	fn boundary(self: Rectangle) -> u64; // Method signatures
-	fn area(self: Rectangle) -> u64;
-}
-
-impl RectangleGeometry of ShapeGeometry {
-fn boundary(self: Rectangle) -> u64 {
-	2 * (self.height + self.width)
-	}
-fn area(self: Rectangle) -> u64 {
-	self.height * self.width
-	}
-}
-
-// -----------------------------------------------------
-
-// STARKNET SMART CONTRACTS
-#[starknet::interface] // <--- Contract Interface
-trait ISimpleStorage<TContractState> {
-	fn set(ref self: TContractState, x: u128); // Reference => Modifies state
-	fn get(self: @TContractState) -> u128; // @ is a snapshot => read-only
-	}
-
-
-#[starknet::contract] // <--- attributes
-mod SimpleStorage {
-	#[storage]
-	struct Storage{
-		stored_data: u128
-	}
-	#[abi(embed_v0)] //  <---- Without this attribute, you can't access these methods outside of this scope
-	impl SimpleStorage of super::ISimpleStorage<ContractState> 
-	// Interface implementation, Super means it is being referenced from the global scope
-	{
-	fn set(ref self: ContractState, x: u128)// Writes to Storage
-		{ 
-		self.stored_data.write(x);
-		} 
-	
-	fn get(self: @ContractState) -> u128 // Reads from storage
-		{
-		self.stored_data.read()
-		}
-	}
-}
-```
-
-All smart contracts have to have a storage implemented, even if it isn't used. 
 
 ### Architecture
 Cairo Smart Contracts compiles into -> **SIERRA** (Safe Intermediate Representation) compiles into -> **CASM** (Safe Cairo Assembly) generates -> **Validity Proof**
@@ -60,11 +5,11 @@ Cairo Smart Contracts compiles into -> **SIERRA** (Safe Intermediate Representat
 - Sequencer always compensated 
 - No more DoS vector as in Cairo0
 
-![[Pasted image 20241004165626.png]]
+![image](https://github.com/nicosanc/nicosanc.github.io/blob/main/assets/images/sn2.jpg)
 
 This is how StarkNet does it 
 
-![[Pasted image 20241004165655.png]]
+![image](https://github.com/nicosanc/nicosanc.github.io/blob/main/assets/images/sn1.jpg)
 
 The prover is run in a separate module called SHARP (Shared Prover)
 - ETH Verifier
