@@ -24,7 +24,6 @@
 - L2 solutions: Scaling solutions like Rollups to improve TX speed and reduce costs
 
 ### Block Generation
-Key components:
 - PoH
 	- **Cryptographic Clock**: PoH creates a historical record that proves that an event has occurred at a specific moment in time. The sequence of events is recorded before consensus
 	- **Verification**: Validators create and validate blocks based on their stake, ensuring network security and integrity 
