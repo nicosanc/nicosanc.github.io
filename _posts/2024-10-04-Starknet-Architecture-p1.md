@@ -5,6 +5,8 @@ title: "Blockchain: Starknet Architecture Pt. 1"
 ### Why I'm posting my Starknet notes
 My learning journey into Blockchain began with Starknet, specifically with their official bootcamp called Basecamp. In this course we learned about the Starknet Architecture and how the L2 interacts with the Ethereum L1. We also learned how to build advanced Smart Contracts in their official Rust-like language Cairo, which is explained in more depth in my Cairo notes. This bootcamp sparked a genuine interest for blockchain technologies, at both the low level and dApp level. These notes are pretty technical but incredibly interesting. Please let me know if there are any inaccuracies! 
 
+
+
 ### Architecture
 Cairo Smart Contracts compiles into -> **SIERRA** (Safe Intermediate Representation) compiles into -> **CASM** (Safe Cairo Assembly) generates -> **Validity Proof**
 - Failed transactions are included in the blocks
