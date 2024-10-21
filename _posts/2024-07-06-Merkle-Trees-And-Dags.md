@@ -1,7 +1,7 @@
 
 ### MERKLE TREE
 
-Merkle Trees ensure data integrity and consistency in distributed systems by allowing efficient and secure verification of data. They are commonly used in blockchain technology to simplify and secure transactions by ensuring that any alteration in data can be quickly detected and traced back to its origin. They're frequently used in blockchain to simplify and secure transactions by ensuring that changes in data or differences between records are easily detected and traced back to their origin.
+Merkle Trees ensure data integrity and consistency in distributed systems by allowing efficient and secure verification of data. They are commonly used in blockchain technology to simplify and secure transactions by ensuring that any alteration in data can be quickly detected and traced back to its origin. 
 
 Common use cases:
 - Git version control
